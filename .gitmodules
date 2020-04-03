@@ -1,0 +1,3 @@
+[submodule "better-parking-permits"]
+	path = better-parking-permits
+	url = git@github.com:tylerdoll/better-parking-permits.git
