@@ -5,3 +5,7 @@ services:
         restart: always
         volumes:
             - ./nginx/nginx.conf:/etc/nginx
+
+    parking:
+        image: tylerdoll/better_parking_permits
+        restart: always
