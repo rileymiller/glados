@@ -41,7 +41,7 @@ services:
   parking:
     image: tylerdoll/better_parking_permits
     volumes:
-      - ./better-parking-permits/src:/app
+      - ./better-parking-permits/api/visitors:/app/api/visitors
     restart: unless-stopped
     dns:
       - 127.0.0.1
