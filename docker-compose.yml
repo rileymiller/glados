@@ -37,10 +37,19 @@ services:
     networks:
       - default
 
-  parking:
-    image: tylerdoll/better_parking_permits
-    volumes:
-      - ./better-parking-permits/api/visitors:/app/api/visitors
+  # Park it Better
+  parking_api:
+    extends:
+      file: park_it_better/docker-compose.yml
+      service: parking_api
+    restart: unless-stopped
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+  parking_ui:
+    extends:
+      file: park_it_better/docker-compose.yml
+      service: parking_api
     restart: unless-stopped
     dns:
       - 127.0.0.1
