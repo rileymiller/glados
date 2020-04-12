@@ -36,7 +36,6 @@ services:
       - "5000:5000/tcp"
     networks:
       - default
-      - backend
 
   parking:
     image: tylerdoll/better_parking_permits
@@ -46,6 +45,3 @@ services:
     dns:
       - 127.0.0.1
       - 1.1.1.1
-
-networks:
-    backend:
