@@ -1,4 +1,4 @@
-version: "3.7"
+version: "2"
 
 services:
   pihole:
@@ -41,7 +41,7 @@ services:
   parking_api:
     extends:
       file: park_it_better/docker-compose.yml
-      service: parking_api
+      service: api
     restart: unless-stopped
     dns:
       - 127.0.0.1
@@ -49,7 +49,7 @@ services:
   parking_ui:
     extends:
       file: park_it_better/docker-compose.yml
-      service: parking_api
+      service: ui
     restart: unless-stopped
     dns:
       - 127.0.0.1
