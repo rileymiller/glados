@@ -12,7 +12,7 @@ services:
     environment:
       TZ: 'America/Denver'
       WEBPASSWORD: 'rawboned sleek divorcee meteoric oldster wadding'
-      ServerIP: 192.168.0.130
+      ServerIP: 192.168.0.2
       VIRTUAL_HOST: pihole.glados
     volumes:
       - './etc-pihole/:/etc/pihole/'
