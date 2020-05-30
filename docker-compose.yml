@@ -60,7 +60,6 @@ services:
     dns:
       - 127.0.0.1
       - 1.1.1.1
-
   parking_db:
     extends:
       file: park_it_better/docker-compose.yml
