@@ -47,7 +47,7 @@ services:
   parking_api:
     extends:
       file: park_it_better/docker-compose.yml
-      service: api
+      service: parking_api
     restart: unless-stopped
     dns:
       - 127.0.0.1
@@ -55,7 +55,7 @@ services:
   parking_ui:
     extends:
       file: park_it_better/docker-compose.yml
-      service: ui
+      service: parking_ui
     restart: unless-stopped
     dns:
       - 127.0.0.1
@@ -63,7 +63,7 @@ services:
   parking_db:
     extends:
       file: park_it_better/docker-compose.yml
-      service: db
+      service: parking_db
     restart: unless-stopped
     dns:
       - 127.0.0.1
